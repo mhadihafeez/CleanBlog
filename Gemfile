@@ -11,6 +11,9 @@ gem 'rails', '~> 5.1.4'
 gem 'devise'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
+
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets

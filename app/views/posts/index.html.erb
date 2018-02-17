@@ -1,0 +1,30 @@
+<%= render partial: 'home/header' %>
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <% @posts.each do |post| %>
+        <div class="post-preview">
+          <%= link_to post_path(post) do %>
+            <h2 class="post-title">
+            <%= post.title %>
+            </h2>
+            <h3 class="post-subtitle">
+              <%= post.body %>
+            </h3>
+          <% end %>
+          <p class="post-meta">Posted by
+            <a href="#">Start Bootstrap</a>
+            on September 24, 2018</p>
+        </div>
+      <hr>
+      <% end %>
+      <!-- Pager -->
+      <div class="clearfix">
+        <%= link_to 'New Post', new_post_path ,class: 'btn btn-primary float-right'%>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<%= render partial: 'home/footer' %>
